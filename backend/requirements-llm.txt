@@ -1,0 +1,16 @@
+# Optional LLM provider SDKs -- install only the ones you plan to use.
+#
+# POLIS runs fine with none of these installed: without a configured
+# provider (see .env.example), the council uses the built-in mock
+# reasoning engine. Install one, set its API key, and set
+# POLIS_LLM_PROVIDER accordingly (see .env.example) to switch to real
+# LLM reasoning.
+#
+#   pip install -r requirements-llm.txt        # all three
+#   pip install anthropic                      # just Anthropic
+#   pip install openai                         # just OpenAI
+#   pip install google-generativeai             # just Gemini
+
+anthropic>=0.34
+openai>=1.40
+google-generativeai>=0.7

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://polis.local/protocol/v1/message.schema.json",
+  "title": "POLIS Protocol v1 Message",
+  "description": "The standard shape every POLIS agent message conforms to. See POLIS_PROTOCOL_V1.md for the full field reference.",
+  "type": "object",
+  "required": [
+    "agent",
+    "goal",
+    "analysis",
+    "evidence",
+    "confidence",
+    "objections",
+    "recommendation",
+    "timestamp"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "agent": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The speaking agent's role name, e.g. 'Risk Agent'."
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Fixed, one-sentence statement of this agent's mandate."
+    },
+    "analysis": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The agent's free-text reasoning about the specific problem."
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Concrete facts or citations grounding the analysis. May be empty."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Self-assessed confidence in the recommendation."
+    },
+    "objections": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Concerns or pushback raised by the agent. May be empty."
+    },
+    "recommendation": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The agent's concrete, actionable suggestion."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of when this message was produced."
+    }
+  }
+}
