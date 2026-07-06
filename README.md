@@ -62,14 +62,21 @@ Every step is visible. Every confidence score, objection, and dissent is on the 
 
 ## 🖼️ Screenshots
 
-*(placeholder — capture these once the app is running locally and drop the images into `frontend/public/screenshots/`, then swap the paths below)*
+![POLIS hero and problem input, with the Problem → Agents → Debate → Consensus → Decision stepper](screenshots/hero.png)
 
-| | |
-|---|---|
-| **Landing + demo scenarios**<br>`frontend/public/screenshots/landing.png` | **Council process + agent cards**<br>`frontend/public/screenshots/agents.png` |
-| ![Landing page with hero and scenario picker](frontend/public/screenshots/landing.png) | ![Agent perspectives grid with confidence bars](frontend/public/screenshots/agents.png) |
-| **Debate timeline**<br>`frontend/public/screenshots/timeline.png` | **Consensus panel + Council Metrics**<br>`frontend/public/screenshots/consensus.png` |
-| ![Debate timeline showing agents responding to each other](frontend/public/screenshots/timeline.png) | ![Consensus panel with final decision, confidence, why-this-decision, and metrics](frontend/public/screenshots/consensus.png) |
+**Landing page.** The council stepper, three ready-made demo scenarios, and the problem input box — this is the first thing a visitor sees, before running anything.
+
+![Agent Perspectives grid: Research, Planner, Critic, Risk, Ethics, and Consensus cards with confidence scores and objections](screenshots/agents.png)
+
+**Agent Perspectives.** Each of the six council members' analysis, confidence score, objections, and recommendation, rendered as its own card once a deliberation completes.
+
+![Debate Timeline showing each agent responding to the agent before it, in order](screenshots/timeline.png)
+
+**Debate Timeline.** The ordered, human-readable debate log — showing exactly who each agent was responding to, so the deliberation reads as a real discussion rather than isolated statements.
+
+![Council Metrics tiles and the Consensus panel with the final decision, confidence, dissenting roles, and a "Why this decision?" breakdown](screenshots/consensus.png)
+
+**Council Metrics + Consensus.** Council Confidence, Agreement Score, Risk Level, and Evidence Quality at a glance, followed by the final recommendation, agreement tier, and the "Why this decision?" explanation (supporting arguments and objections behind the outcome).
 
 ## 🏗️ Architecture Overview
 
